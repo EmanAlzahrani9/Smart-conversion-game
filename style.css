@@ -1,1 +1,100 @@
-body{background:#fff;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* الشاشات */
+#start-screen,
+#game-screen,
+#end-screen {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.active {
+  display: block;
+}
+
+/* العناوين */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #3ddc97;
+}
+
+h2, h3 {
+  margin: 10px 0;
+}
+
+/* القوائم */
+select {
+  padding: 8px 12px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* الأزرار */
+button {
+  background: #3ddc97;
+  color: #0f172a;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #2ecc71;
+}
+
+/* خيارات الإجابة */
+.choice {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1.2rem;
+  background: #1e293b;
+  color: white;
+  border-radius: 8px;
+}
+
+.choice:hover {
+  background: #334155;
+}
+
+/* التغذية الراجعة */
+#feedback {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* شريط التقدم */
+#progress-bar {
+  transition: width 0.3s;
+}
+
+/* شاشة النهاية */
+#end-screen input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  width: 60%;
+  font-size: 1rem;
+}
