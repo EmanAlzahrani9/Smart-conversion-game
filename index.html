@@ -1,1 +1,78 @@
-<html><body>Placeholder index</body></html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لعبة التحويل الذكي</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- مكتبة الشهادة -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- شاشة البداية -->
+<div id="start-screen" class="active">
+  <h1>🔬 لعبة التحويل الذكي</h1>
+
+  <div>
+    الوحدة:
+    <select id="unit-select">
+      <option value="m">متر</option>
+      <option value="g">جرام</option>
+      <option value="s">ثانية</option>
+    </select>
+  </div>
+
+  <div>
+    نطاق البادئات:
+    <select id="range-select">
+      <option value="common">شائعة</option>
+      <option value="extended">موسعة</option>
+      <option value="all">كاملة</option>
+    </select>
+  </div>
+
+  <div>
+    عدد الأسئلة:
+    <select id="questions-per-level">
+      <option value="5">5</option>
+      <option value="8">8</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+
+  <br>
+  <button id="btn-start">ابدأ اللعبة</button>
+</div>
+
+<!-- شاشة اللعبة -->
+<div id="game-screen">
+  <h2>المستوى: <span id="level"></span></h2>
+  <h3>النقاط: <span id="score"></span></h3>
+  <h3>الوقت: <span id="time"></span></h3>
+
+  <div id="question-text"></div>
+  <div id="choices"></div>
+  <div id="feedback"></div>
+
+  <div style="width:100%;background:#ddd;height:10px;margin-top:10px;">
+    <div id="progress-bar" style="width:0%;height:10px;background:#4caf50;"></div>
+  </div>
+</div>
+
+<!-- شاشة النهاية -->
+<div id="end-screen">
+  <h2 id="end-title"></h2>
+  <div id="end-summary"></div>
+
+  <input id="student-name" placeholder="اسم الطالب">
+
+  <br><br>
+  <button id="btn-next-level">المستوى التالي</button>
+  <button id="btn-restart">إعادة اللعبة</button>
+  <button id="btn-certificate">تحميل الشهادة PDF</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
